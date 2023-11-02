@@ -8,7 +8,7 @@ router.post("/register",async(req,res)=>{
         if(error){
             return res.status(400).json({message:error.details[0].message})
         }
-        const user = User.findOne({email:req.body.email});
+        const user = await User.findOne({email:req.body.email});
         if(user){
             return res.status(409).json({message:"user with given email is already exist!"})
         }
@@ -20,7 +20,7 @@ router.post("/register",async(req,res)=>{
             res.status(500).json({message:"Server error"})
         );
     } catch (error) {
-        
+        res.status(500).json({message:error});  
     }
 });
 

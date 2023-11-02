@@ -5,7 +5,7 @@ const passwordComplexity = require("joi-password-complexity");
 
 const userSchema = new mongoose.Schema({
   uid: {
-    type: int,
+    type: String,
     require: true,
   },
   name: {
@@ -34,7 +34,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-userSchema.methodes.generateAuthToken = function () {
+userSchema.methods.generateAuthToken = function() {
   const token = jwt.sign({ _id: this.uid }, process.env.JWTPRIVATEKEY, {
     expiresIn: "1d",
   });
@@ -49,7 +49,8 @@ const validate = (data) => {
     email: joi.string().email().required(),
     password: passwordComplexity().required(),
     department: joi.string().required(),
-    contact: joi.number().min(10).max(10).required(),
+    contact: joi.number().min(10).required(),
+    role: joi.string().required(),
   });
   return schema.validate(data);
 };
