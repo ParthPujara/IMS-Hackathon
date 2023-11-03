@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sign_in.css";
-import logo from "../Images/signIn_logo.png";
+import logo from "../../public/Images/signIn_logo.png";
 
 export default function Sign_in() {
 	return (
