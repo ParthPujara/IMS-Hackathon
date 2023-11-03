@@ -10,11 +10,17 @@ export default function Sign_in() {
 					<div className="Div1_Signin">
 						<h1 className="SignIn_h1">Sign In</h1>
 						<p className="p1_Div1_Signin">Provide your Email and Password</p>
-						<div className="usName_inpt_div">
-							<label htmlFor="usName_Inpt" className="usName_inpt_lbl">
-								Username :
+
+						<div className="role_dd_div">
+							<label htmlForfor="role_dd" className="role_dd_lbl">
+								Select Role :
 							</label>
-							<input id="usName_Inpt" />
+
+							<select id="role_dd" className="role_dd_select_signin">
+								<option value="Branch Manager">Branch Manager</option>
+								<option value="Branch Worker">Branch Worker</option>
+								<option value="Stationary Manager">Stationary Manager</option>
+							</select>
 						</div>
 
 						<div className="email_inpt_div">

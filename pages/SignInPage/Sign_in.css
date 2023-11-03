@@ -33,28 +33,36 @@
 	color: rgb(67, 67, 67);
 }
 
-.usName_inpt_div {
+.role_dd_div {
 	padding: 10px;
 }
 
-.usName_inpt_lbl {
+.role_dd_lbl {
 	font-size: 20px;
 	font-weight: 600;
 	color: rgb(67, 67, 67);
 }
 
-#usName_Inpt {
+.role_dd_select_signin {
 	padding: 5px;
 	font-size: 15px;
-	margin-left: 15px;
 	border: none;
 	width: 52%;
 }
 
-#usName_Inpt:focus {
-	padding: 5px;
-	font-size: 15px;
+.role_dd_select_signin:focus {
 	outline: none;
+}
+
+.role_dd_select_signin option {
+	padding: 10px;
+	font-size: 15px;
+	font-weight: 600;
+	color: rgb(67, 67, 67);
+}
+
+.role_dd_select_signin option::selection {
+	background-color: lightgray !important;
 }
 
 .email_inpt_div {
@@ -94,7 +102,7 @@
 #pass_Inpt {
 	padding: 5px;
 	font-size: 15px;
-	margin-left: 20px;
+	margin-left: 15px;
 	border: none;
 	width: 52%;
 }
