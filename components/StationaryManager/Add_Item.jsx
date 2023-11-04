@@ -71,11 +71,7 @@ export default function Add_Item() {
 				</div>
 				{console.log(category,name,price)}
 				<div className="button">
-<<<<<<< HEAD
 					<button onClick={handleAdd}>Add</button>
-=======
-					<button onClick={addItem}>Add</button>
->>>>>>> d7d4f4f (API for add item)
 				</div>
 			</div>
 		</div>
