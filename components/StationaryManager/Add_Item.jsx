@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import "./Add_Item.css";
 
 export default function Add_Item() {
+
+	const handleAdd=()=>{
+		
+	}
+
 	return (
 		<div className="main_Add_item">
 			<div className="d_h1_ad_item">
@@ -71,7 +76,7 @@ export default function Add_Item() {
 				</div>
 
 				<div className="button">
-					<button>Add</button>
+					<button onClick={handleAdd}>Add</button>
 				</div>
 			</div>
 		</div>

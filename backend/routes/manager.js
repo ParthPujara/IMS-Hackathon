@@ -16,7 +16,7 @@ router.post("/addEmp",async(req,res)=>{
             return res.status(409).json({message:"user with given email is already exist!"});
         }
         const hashPassword = await bcrypt.hash(req.body.password,10);
-        await new Employee({...req.body,password:hashPassword}).save()
+        await new Employee({...req.body,password:hashPassword,role:"employee"}).save()
         .then(()=>{
             res.status(200).json({message:"Registered Successfully!"})
         })
