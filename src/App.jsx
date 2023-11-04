@@ -12,8 +12,6 @@ function App() {
 			<Router>
 				<Routes>
 					<Route exact path="/" element={<Signin />} />
-					<Route exact path="/branch-worker" element={<BranchWorker/>} />
-					<Route exact path="/branch-worker/:item" element={<Center/>} />
 				</Routes>
 			</Router>
 		</div>
