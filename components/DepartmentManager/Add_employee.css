@@ -1,7 +1,24 @@
-.Main_Div_Signin {
+.Main_Div_Add_emp {
 	width: 100%;
-	padding: 0px;
-	margin: 0px;
+	/* padding: 0px; */
+	/* margin: 0px; */
+	height: 100vh;
+	background: linear-gradient(
+		135deg,
+		#9b59b6 10%,
+		rgba(251, 207, 64, 0.505) 60%
+	);
+	padding-top: 50px;
+}
+
+.Add_emp_h1::before {
+	content: " ";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 30px;
+	background: linear-gradient(135deg, rgba(251, 207, 64, 0.505), #9b59b6);
 }
 
 .Main_div2_Add_emp {
@@ -11,14 +28,10 @@
 	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10%;
+	/* margin-top: 10%; */
 	display: flex;
-	background: linear-gradient(
-		135deg,
-		#9b59b6 10%,
-		rgba(251, 207, 64, 0.505) 60%
-	);
 	box-shadow: 5px 5px 5px gray;
+	background-color: white;
 }
 
 .Div1_Add_emp {
@@ -51,7 +64,8 @@
 	padding: 5px;
 	font-size: 15px;
 	margin-left: 45px;
-	border: none;
+	border: 1px solid black;
+	border-radius: 5px;
 	width: 52%;
 }
 
@@ -75,8 +89,10 @@
 	padding: 5px;
 	font-size: 15px;
 	margin-left: 27px;
-	border: none;
+	/* border: none; */
 	width: 52%;
+	border: 1px solid black;
+	border-radius: 5px;
 }
 
 #email_Inpt_add_emp:focus {
@@ -99,8 +115,10 @@
 	padding: 5px;
 	font-size: 15px;
 	margin-left: 15px;
-	border: none;
+	/* border: none; */
 	width: 52%;
+	border: 1px solid black;
+	border-radius: 5px;
 }
 
 #pass_Inpt_add_emp:focus {
@@ -123,8 +141,10 @@
 	padding: 5px;
 	font-size: 15px;
 	margin-left: 29px;
-	border: none;
+	/* border: none; */
 	width: 52%;
+	border: 1px solid black;
+	border-radius: 5px;
 }
 
 #contc_Inpt_add_emp:focus {
@@ -147,8 +167,10 @@
 	padding: 5px;
 	font-size: 15px;
 	margin-left: 0px;
-	border: none;
+	/* border: none; */
 	width: 52%;
+	border: 1px solid black;
+	border-radius: 5px;
 }
 
 #dept_Inpt_add_emp:focus {
