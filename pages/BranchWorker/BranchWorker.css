@@ -1,51 +1,49 @@
-.addItem{
-    height: auto;
-    width: 50%;
+.addItem {
+  height: auto;
+  width: 50%;
 }
-.cr{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
+.cr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
 }
-.clg{
-    position: relative;
-    left: 30px;
+.clg {
+  position: relative;
+  left: 30px;
 }
-.row{
-    width: 150%;
+.row {
+  width: 150%;
 }
-.col{
-    margin: 0.5rem;
+.col {
+  margin: 0.5rem;
 }
-.col-style{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.col-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.pl{
-    color: black;
+.pl {
+  color: black;
 }
-.brdr{
-    border: 1px solid black;
+.brdr {
+  border: 1px solid black;
 }
-.style-total{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    
-
+.style-total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
-.fc{
-    margin: 1rem;
-    width: 150px;
-    margin-left: 1rem;
+.fc {
+  margin: 1rem;
+  width: 150px;
+  margin-left: 1rem;
 }
-.bbp{
-    margin: 1rem;
-    width: 150px;
+.bbp {
+  margin: 1rem;
+  width: 150px;
 }
-.nb{
-    background-color: aqua;
+.nb {
+  background-color: aqua;
 }
