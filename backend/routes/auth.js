@@ -15,7 +15,7 @@ router.post("/login",async(req,res)=>{
         }
 
         const token = user.generateAuthToken();
-        res.status(200).json({status: "true",token:token,role:user.role,});
+        res.status(200).json({status: "true",token:token,role:user.role,deptId:user.departmentId});
     } catch (error) {
         res.status(500).json({message:`error occured: ${error}`});  
     }
