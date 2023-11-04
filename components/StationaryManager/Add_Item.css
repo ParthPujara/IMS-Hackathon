@@ -5,13 +5,24 @@
 }
 
 .main_Add_item {
-	display: flex;
+	/* display: flex; */
 	height: 100vh;
 	width: 100%;
 	justify-content: center;
 	align-items: center;
-	background: linear-gradient(135deg, rgba(251, 207, 64, 0.505), #9b59b6);
+	background: linear-gradient(135deg, #9b59b6, rgba(251, 207, 64, 0.505));
 	padding: 5% 0;
+}
+
+.d_h1_ad_item {
+	padding: 0px 50px;
+	margin-bottom: 60px;
+}
+
+.h1_ad_item {
+	text-align: center;
+	color: lightgray;
+	text-shadow: 3px 3px 3px black;
 }
 
 .main_form1 {
@@ -19,6 +30,8 @@
 	background: white;
 	padding: 25px 30px;
 	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .main_form1 .head {

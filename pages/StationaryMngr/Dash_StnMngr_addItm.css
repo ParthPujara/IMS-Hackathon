@@ -1,3 +1,13 @@
-.main_d_addI_dash{
-    display: flex;
+.main_d_addI_dash {
+	display: flex;
+
+	width: 100%;
+}
+
+.d_for_Nav_addI {
+	width: 20%;
+}
+
+.d_for_addR_addI {
+	width: 80%;
 }
