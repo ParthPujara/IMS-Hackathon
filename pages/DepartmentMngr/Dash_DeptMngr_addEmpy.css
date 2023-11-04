@@ -1,0 +1,13 @@
+.main_d_DeptEmpy_dash {
+	display: flex;
+
+	width: 100%;
+}
+
+.d_for_Nav_DeptEmpy {
+	width: 20%;
+}
+
+.d_for_addEmp_DeptEmpy {
+	width: 80%;
+}
