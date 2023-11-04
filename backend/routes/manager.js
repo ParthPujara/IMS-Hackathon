@@ -18,10 +18,10 @@ router.post("/addEmp",async(req,res)=>{
         const hashPassword = await bcrypt.hash(req.body.password,10);
         await new Employee({...req.body,password:hashPassword,role:"employee"}).save()
         .then(()=>{
-            res.status(200).json({message:"Registered Successfully!"})
+            res.status(200).json({status:true,message:"Registered Successfully!"})
         })
     } catch (error) {
-        res.status(500).json({message:`error occured: ${error}`});  
+        res.status(500).json({status:false,message:`error occured: ${error}`});  
     }
 });
 

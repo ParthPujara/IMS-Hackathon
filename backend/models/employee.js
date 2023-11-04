@@ -5,7 +5,7 @@ const passwordComplexity = require("joi-password-complexity");
 
 const employeeSchema = new mongoose.Schema({
   empId: {type: Number},
-  departmentId: {type: mongoose.Schema.Types.ObjectId,ref:"department",},
+  departmentId: {type:Number,required:true,},
   name: {type: String,required: true,},
   email: {type: String,required: true,},
   password: {type: String,required: true,},
@@ -30,7 +30,7 @@ const validate = (data) => {
     password: passwordComplexity().required(),
     departmentId: joi.number().required(),
     contact: joi.number().min(10).required(),
-    role: joi.string().required(),
+    // role: joi.string().required(),
   });
   return schema.validate(data);
 };
