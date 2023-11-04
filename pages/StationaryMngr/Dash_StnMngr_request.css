@@ -1,0 +1,13 @@
+.main_d_req_dash {
+	display: flex;
+
+	width: 100%;
+}
+
+.d_for_Nav_req {
+	width: 20%;
+}
+
+.d_for_addR_req {
+	width: 80%;
+}

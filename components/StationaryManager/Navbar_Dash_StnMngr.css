@@ -1,0 +1,29 @@
+.main_d_Nav_smd {
+	display: grid;
+	grid-template-columns: 1fr;
+	height: 100vh;
+}
+
+.d1_Nav_smd {
+	background-color: rgba(251, 207, 64, 0.505);
+}
+
+.ul_Nav_smd {
+	list-style: none;
+	margin-top: 20px;
+	padding: 0px 10px;
+}
+
+.li_Nav_smd {
+	padding: 15px 0px;
+	border-bottom: 0.5px solid gray;
+	text-align: center;
+	font-weight: 600;
+	color: rgb(81, 80, 80);
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.li_Nav_smd:hover {
+	background-color: rgba(251, 207, 64, 0.601);
+}

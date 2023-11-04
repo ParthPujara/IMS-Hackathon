@@ -1,0 +1,127 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.main_Add_item {
+	/* display: flex; */
+	height: 100vh;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(135deg, #9b59b6, rgba(251, 207, 64, 0.505));
+	padding: 5% 0;
+}
+
+.d_h1_ad_item {
+	padding: 0px 50px;
+	margin-bottom: 60px;
+}
+
+.h1_ad_item {
+	text-align: center;
+	color: lightgray;
+	text-shadow: 3px 3px 3px black;
+}
+
+.main_form1 {
+	width: 35%;
+	background: white;
+	padding: 25px 30px;
+	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main_form1 .head {
+	font-size: 25px;
+	font-weight: 500;
+	position: relative;
+}
+
+.main_form1 .head::before {
+	content: " ";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 30px;
+	background: linear-gradient(135deg, rgba(251, 207, 64, 0.505), #9b59b6);
+}
+
+.main_form1 input:focus {
+	outline: none;
+}
+
+.catg_dd_select_signin {
+	padding: 5px;
+	margin: 10px 17px;
+	font-size: 15px;
+	border: 1px solid black;
+	border-radius: 5px;
+	width: 60%;
+	font-weight: 600;
+}
+
+.catg_dd_select_signin:focus {
+	outline: none;
+}
+
+.catg_dd_select_signin .slct_ctg_opt {
+	padding: 10px;
+	font-size: 15px;
+	font-weight: 600;
+	color: rgb(67, 67, 67);
+}
+
+.catg_dd_select_signin .Slct_catg_opt {
+	color: rgb(247, 243, 243) !important;
+}
+
+.catg_dd_select_signin option::selection {
+	background-color: lightgray !important;
+}
+
+.itm_nam_inpt {
+	padding: 5px;
+	margin: 10px 13px;
+	font-size: 15px;
+	border: 1px solid black;
+	border-radius: 5px;
+	width: 60%;
+	font-weight: 600;
+}
+
+.itm_price_inpt {
+	padding: 5px;
+	margin: 10px 21px;
+	font-size: 15px;
+	border: 1px solid black;
+	border-radius: 5px;
+	width: 60%;
+	font-weight: 600;
+}
+
+.main_Add_item .button {
+	height: 45px;
+	margin: 15px auto;
+	width: 40%;
+}
+
+.main_Add_item .button button {
+	height: 100%;
+	width: 100%;
+	outline: none;
+	color: white;
+	border: none;
+	background: linear-gradient(135deg, rgba(251, 207, 64, 0.505), #9b59b6);
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	border-radius: 5px;
+}
+
+.button button:hover {
+	background: linear-gradient(-135deg, rgba(251, 207, 64, 0.505), #9b59b6);
+}
