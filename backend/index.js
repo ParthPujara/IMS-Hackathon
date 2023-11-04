@@ -7,6 +7,7 @@ require('dotenv').config();
 const auth = require('./routes/auth');
 const manager = require('./routes/manager');
 const employee = require('./routes/employee');
+const stationary = require('./routes/stationary');
 
 connection();
 
@@ -16,6 +17,7 @@ app.use(cors());
 app.use(auth);
 app.use(manager);
 app.use(employee);
+app.use(stationary);
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);

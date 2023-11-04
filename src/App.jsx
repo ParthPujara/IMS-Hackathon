@@ -5,6 +5,8 @@ import Add_Item from "../pages/StationaryMngr/Add_Item";
 import Reque_Item from "../pages/StationaryMngr/RequePage";
 import Nav_smd from "../pages/StationaryMngr/Navbar_Dash_StnMngr";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import BranchWorker from "../pages/BranchWorkerPage/BranchWorker";
+import Center from "../components/BranchWorkerComponents/Center";
 
 function App() {
 	return (
