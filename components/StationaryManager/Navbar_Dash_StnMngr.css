@@ -1,6 +1,6 @@
 .main_d_Nav_smd {
 	display: grid;
-	grid-template-columns: 1fr 3.5fr;
+	grid-template-columns: 1fr;
 	height: 100vh;
 }
 
