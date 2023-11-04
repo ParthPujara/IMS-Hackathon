@@ -2,7 +2,7 @@ const router = require('express').Router();
 const {Employee} = require('../models/employee');
 const bcrypt = require('bcrypt');
 
-router.get("/login",async(req,res)=>{
+router.post("/login",async(req,res)=>{
     try {
         const user = await Employee.findOne({email:req.body.email});
         if(!user){
