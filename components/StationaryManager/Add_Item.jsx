@@ -3,10 +3,37 @@ import "./Add_Item.css";
 
 export default function Add_Item() {
 
-	const handleAdd=()=>{
-		
-	}
+	const [category, setCategory] = useState("");
+	const [name, setName] = useState("");
+	const [price, setPrice] = useState("");
 
+
+	const addItem = async () => {
+		const header = {
+		  "Content-type": "application/json",
+		};
+		const body = {
+		  category: category,
+		  price: price,
+		  name: name,
+		};
+	
+		const response = await fetch("http://192.168.248.100:2222/login", {
+		  method: "POST",
+		  headers: header,
+		  body: JSON.stringify(body),
+		});
+	
+		const data = await response.json();
+	
+		if (data.status === "true") {
+			alert("Item Added Successfully");
+		}
+		else
+		{
+			alert("Item Not Added");
+		}
+	}
 	return (
 		<div className="main_Add_item">
 			<div className="d_h1_ad_item">
@@ -69,9 +96,9 @@ export default function Add_Item() {
 					</label>
 					<input className="itm_price_inpt" onChange={(e)=>{setPrice(e.target.value)}}/>
 				</div>
-				{console.log(category,name,price)}
+
 				<div className="button">
-					<button onClick={handleAdd}>Add</button>
+					<button onClick={addItem}>Add</button>
 				</div>
 			</div>
 		</div>
