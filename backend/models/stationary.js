@@ -1,14 +1,13 @@
 const mongoose = require('mongoose');
 
-const managerSchema = new mongoose.Schema({
-    managerId: {type: Number},
-    departmentId: {type: Number,required: true},
+const stationarySchema = new mongoose.Schema({
+    stationaryId: {type: Number},
     name: {type: String,required: true},
     email: {type: String,required: true,},
     password: {type: String,required: true,},
     Contact: {type: Number,required: true},
 });
 
-const Manager = mongoose.model("manager",managerSchema);
+const Stationary = mongoose.model("stationary",stationarySchema);
 
-module.exports = Manager;
+module.exports = Stationary;
