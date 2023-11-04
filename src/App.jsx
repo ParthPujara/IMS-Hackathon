@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Signin from "../pages/SignInPage/Sign_in";
+import Add_emp from "../components/DepartmentManager/Add_employee";
 import Add_Item from "../components/StationaryManager/Add_Item";
 import Reque_Item from "../components/StationaryManager/RequePage";
 import Nav_smd from "../components/StationaryManager/Navbar_Dash_StnMngr";
@@ -14,6 +15,7 @@ function App() {
 			<Router>
 				<Routes>
 					<Route exact path="/" element={<Signin />} />
+					<Route exact path="/add_emp" element={<Add_emp />} />
 					<Route exact path="/add_item" element={<Add_Item />} />
 					<Route exact path="/reque_item" element={<Reque_Item />} />
 					<Route exact path="/nav_smd" element={<Nav_smd />} />
