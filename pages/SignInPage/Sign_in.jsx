@@ -36,7 +36,6 @@ export default function Sign_in() {
       alert("Login Failed");
     }
 
-    return data;
   };
 
   return (

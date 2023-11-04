@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./BranchWorker.css";
+import { useNavigate } from "react-router-dom";
 
 const BranchWorker = () => {
   const [items, setItems] = useState([]);
   const [count, setCount] = useState(1);
   const [selected, setSelected] = useState("")
+  const navigate = useNavigate();
   const fetchItems = async () => {
     const fi = await fetch("http://192.168.248.100:2222/getItems", {
       method: "GET",
@@ -92,7 +94,7 @@ const BranchWorker = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Add item
+                  Select Item
                 </button>
                 <ul className="dropdown-menu">
                   {items.map((i, k) => {
@@ -138,7 +140,7 @@ const BranchWorker = () => {
           </div>
           <div className="col col-lg-2 clg">
             <label for="exampleFormControlInput1" className="form-label">
-              Cost
+              Quantity
             </label>
             <nav aria-label="...">
               <ul className="pagination ">
@@ -173,15 +175,10 @@ const BranchWorker = () => {
           <div className="col col-lg-3">
             <div className="mb-3">
               <label for="exampleFormControlInput1" className="form-label">
-                Cost
+                Selected Item
               </label>
               <div>{selected}</div>
             </div>
-          </div>
-          <div className="col col-style col-lg-2">
-            <button type="button" className="btn btn-primary btn-style">
-              Add Item
-            </button>
           </div>
         </div>
       </div>
@@ -221,13 +218,14 @@ const BranchWorker = () => {
             type="email"
             className="form-control fc"
             id="exampleFormControlInput1"
+            placeholder="180"
           />
         </div>
       </div>
 
       <div className="container">
         <div className="style-total">
-          <button type="button" className="btn btn-danger bbp">
+          <button type="button" className="btn btn-danger bbp" onClick={()=>{alert("Submited Request"); navigate("/")}}>
             Submit
           </button>
         </div>
