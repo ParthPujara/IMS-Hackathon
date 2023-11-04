@@ -5,6 +5,7 @@ import Add_Item from "../components/StationaryManager/Add_Item";
 import Reque_Item from "../components/StationaryManager/RequePage";
 import Nav_smd from "../components/StationaryManager/Navbar_Dash_StnMngr";
 import Dash_StnMngr_AddI from "../pages/StationaryMngr/Dash_StnMngr_addItm";
+import Dash_StnMngr_Reque from "../pages/StationaryMngr/Dash_StnMngr_request";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -20,6 +21,11 @@ function App() {
 						exact
 						path="/request/addItem"
 						element={<Dash_StnMngr_AddI />}
+					/>
+					<Route
+						exact
+						path="/request/request"
+						element={<Dash_StnMngr_Reque />}
 					/>
 				</Routes>
 			</Router>
