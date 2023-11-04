@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sign_in.css";
 import logo from "../../public/Images/signIn_logo.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Sign_in() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+	const navigate = useNavigate();
+
+
+
   const signIn = async () => {
-    const email = document.getElementById("email_Inpt").value;
-    const password = document.getElementById("pass_Inpt").value;
     const header = {
       "Content-type": "application/json",
     };
@@ -15,7 +20,7 @@ export default function Sign_in() {
     };
 
     const response = await fetch("http://192.168.248.100:2222/login", {
-      method: "GET",
+      method: "POST",
       headers: header,
       body: JSON.stringify(body),
     });
@@ -23,8 +28,10 @@ export default function Sign_in() {
     const data = await response.json();
     console.log(data);
 
-    if (data.status) {
-      alert("Login Successful");
+    if (data.status === "true") {
+		if(data.role == "employee")
+		navigate("/branch-worker");
+    //   alert("Login Successful");
     } else {
       alert("Login Failed");
     }
@@ -44,18 +51,48 @@ export default function Sign_in() {
               <label htmlFor="email_Inpt" className="email_inpt_lbl">
                 Email Id :
               </label>
-              <input id="email_Inpt" />
+              <input
+                id="email_Inpt"
+                type="email"
+                autoComplete="off"
+                required={true}
+                minLength={8}
+                maxLength={16}
+                pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                title="Invalid Email"
+                placeholder="Enter Email"
+				onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
 
             <div className="pass_inpt_div">
               <label htmlFor="pass_Inpt" className="pass_inpt_lbl">
                 Password :
               </label>
-              <input id="pass_Inpt" />
+              <input
+                id="pass_Inpt"
+				placeholder="Enter password"
+                type="password"
+                autoComplete="off"
+                required={true}
+                minLength={8}
+                maxLength={16}
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+				onChange={(e) => setPassword(e.target.value)}
+			  	/>
             </div>
 
             <div className="signin_btn_div">
-              <button className="signin_btn">Sign In</button>
+              <button
+                className="signin_btn"
+                onClick={() => {
+                  if (email !== "" && password !== "") signIn();
+                  else alert("Please Enter Email and Password");
+                }}
+              >
+                Sign In
+              </button>
             </div>
           </div>
           <div className="Div2_Signin">

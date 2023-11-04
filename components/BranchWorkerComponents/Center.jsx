@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router'
-import LeftBar from './LeftBar';
-import TopBar from './TopBar';
 import RightBar from './RightBar';
 
 const Center = () => {
@@ -9,9 +7,7 @@ const Center = () => {
     const [count, setCount] = useState(1);
   return (
     <div>
-        <TopBar titleName={"Branch Worker"}/>
         <div className="content">
-        <LeftBar/>
       {item}
         <div className="quantity">
             <div className="count">{count}</div>
