@@ -1,15 +1,26 @@
 const routes = require("express").Router();
 const Items = require("../models/items");
+const Request = require('../models/request');
 
 routes.post("/addItem", async (req, res) => {
+  let flag = true;
   try {
     const { category, name, price } = req.body;
 
-    const cat = Items.findOne({ "items.category": category });
-    // res.send({cat:cat});
-    // if(cat)
-    //   console.log(cat);
-    if (!cat) {
+    Items.findOne({ "items.category": category })
+    .then(async()=>{
+      const result = await Items.updateOne(
+        { "items.category": category },
+        { $push: { "items.$.item_details": { name: name, price: price } } }
+      );
+      if (result){
+        flag=false;
+        return res.status(200).json({status:true, message: "Item added to the category" });
+      }else{
+        return res.status(500).json({status:false, message: "Error occured" });
+      }
+    });
+    if(flag){
       await new Items({
         items: [
           {
@@ -25,23 +36,25 @@ routes.post("/addItem", async (req, res) => {
       })
         .save()
         .then(() => {
-          res.status(200).json({ message: "Item added successfully" });
-        });
-    
-   } else {
-        const result = await Items.updateOne(
-          { "items.category": category },
-          { $push: { "items.$.item_details": { name: name, price: price } } }
-        );
-        if (result){
-          return res.status(200).json({ message: "Item added to the category" });
-        }
-        res.status(500).json({ message: "Error occured" });
-   }
-      
+          res.status(200).json({status:true, message: "Item added successfully" });
+        }); 
+    }
   } catch (error) {
-    res.status(500).json({ message: `Error accured: ${error}` });
+    res.status(500).json({ status:false,message: `Error accured: ${error}` });
   }
 });
+
+routes.get("/getReq", async (req, res) => {
+  try {
+  const req = Request.find();
+  if(req){
+    return res.status(200).json({status:true, data:req });
+  }else{
+    return res.status(404).json({status:true, message:"No Requests Found!" });
+  }
+  } catch (error) {
+    res.status(500).json({ status:false,message: `Error accured: ${error}` }); 
+  }
+})
 
 module.exports = routes;
